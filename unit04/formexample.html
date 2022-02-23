@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- formexample.html -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Data List Example</title>
+</head>
+<body>
+    <p>
+    <input type ="text" name="city" list="cities"/>
+    <datalist id="cities">
+        <option>Calcutta</option>
+        <option>Calgary</option>
+        <option>London</option>
+        <option>Los Angeles</option>
+        <option>Paris</option>
+        <option>Prague</option>
+    </datalist>
+    </p>
+    <p>
+        <select name="choices">
+            <option value="1">First</option>
+            <option value="2">Second</option>
+            <option value="3">Third</option>
+            <!-- Example: GET/POST name=2 -->
+        </select>
+    </p>
+    <!-- TODO select group -->
+    <p>
+    <label>Continent:</label><br/>
+    <input type="radio" name="where" value="1">North America<br/>
+    <input type="radio" name="where" value="2" checked>South America<br/>
+    <input type="radio" name="where" value="3">Asia<br/>
+    </p>
+    <p>
+        <label>Where would you like to visit?</label><br/>
+        <input type="checkbox" name="visit" value="canada">Canada<br/>
+        <input type="checkbox" name="visit" value="france">France<br/>
+        <input type="checkbox" name="visit" value="germany">Germany<br/>
+    </p>
+    <p>
+        <input type="submit"/><input type="reset"/><br/>
+        <input type="button" value="Click Me"/>
+        <input type="image" src="images/appointment.png"/>
+        <button>
+            <a href="email.html">
+                <img src="images/email.png" alt="..."/>
+                Email
+            </a>
+        </button>
+        <button>
+            <img src="images/edit.png" alt="..."/>
+        </button>
+    </p>
+    <p>
+        <label>Rate this photo: </label>
+        <input type="number" min="1" max="5" name="rate"/><br/>
+        Grumpy
+        <input type="range" min="0" max="10" step="1" name="happiness"/>
+        Ecstatic
+    </p>
+    <p>
+        <label>Date: </label>
+        <input type="date"/>
+    </p>
+    <p>
+        <label>Time: </label>
+        <input type="time"/>
+    </p>
+    <!-- TODO: input type datetime-local, month, week -->
+</body>
+</html>
