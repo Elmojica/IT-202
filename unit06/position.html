@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> Position Examples</title>
+        <style> 
+            figure {
+                border: 1pt solid #A8A8A8;
+                background-color: #EDEDDD;
+                padding:10px;
+                width: 150px;
+                position: relative;
+                /* position: absolute; */
+                /* float: left; */
+                /* margin:10px; */
+                top:0;
+                left: 0;
+            }
+            figcaption {
+                background-color: #EDEDDD;
+                padding: 5px;
+                position: absolute;
+                top: 150px;
+                left: 20px;
+            }
+            .overlayed{
+                position: absolute;
+                /* the stuff below allows for the image to be correctly placed over the image without
+                being over the actual padding. */
+                top:10px;
+                left: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget purus fringilla, commodo odio eu, gravida libero. Integer lobortis lacus in nisl convallis commodo. 
+            Praesent vel sapien metus. Cras consequat metus vel placerat tristique. Vivamus pretium ultricies interdum. Quisque ut ante fermentum justo facilisis sollicitudin 
+            ut vel nulla. Etiam in libero convallis, ultrices diam vel, tincidunt tellus. Vivamus quis euismod magna.</p>
+
+        <figure>
+            <img src="images/828.jpg" alt="text"/>
+            <figcaption> British Museum</figcaption>
+            <img src="images/new-banner.png" class="overlayed"/>
+        </figure>
+        <p>
+            Donec ante felis, ultrices euismod est eget, malesuada rutrum libero. Pellentesque ullamcorper arcu id dui finibus, non accumsan turpis vulputate. 
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec commodo quam dolor, in scelerisque purus rhoncus at.
+            Quisque ac dui suscipit, imperdiet velit eget, ornare ex. Proin nec urna molestie, mollis purus quis, tempus nisl. Sed pulvinar diam eu iaculis pulvinar.
+            Mauris ac risus quis massa finibus vehicula. Phasellus at fermentum magna. Nam lobortis orci eu leo tincidunt sodales. Ut blandit lacinia dolor ac faucibus.
+            Mauris non nisi sed est ultrices eleifend. Sed elit lorem, ultricies eleifend consectetur eu, porta ut ex. Nullam vulputate nisl eget tincidunt rutrum. </p>
+    </body>
+</html>
