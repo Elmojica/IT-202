@@ -7,7 +7,7 @@
     --color-text-light: #F5F7FA;
     --color-text-dark: #3E4C59;
 
-    --color-back: #F5F7FA;
+    --color-back: #c884f5;
 }
 html { box-sizing: border-box; }
 *, *:before, *:after {
@@ -33,19 +33,103 @@ h2, h3, h4 {
 .container {
 	padding: 25px;
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 175px 75px 175px 275px;
+    grid-gap: 25px;
 
  }
  .container > div {
      background-color: #616E7C;
      color: white;
      border: 0;
-     border-radius: 3px;
-     padding: 1.5em;
+     border-radius: 10px;
+     padding: 0;
 	 box-shadow: 2px 2px 2px 2px hsla(0,0%,75%,0.2);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     overflow: hidden;
+     object-fit: fill;
+ }
+ .container > button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    border: none;
+    background-color: #C7068D;
+    border-radius: 15px;
+    box-shadow: 0 9px #3d293d;
  }
 
- /* add your styles */
+.container >button:active{
+    background-color: #F939BF;
+    box-shadow: 0 5px #282d35;
+    transform: translateY(4px);
+}
 
+
+ /* add your styles */
+#a {
+    grid-column: 1 / span 2;
+}
+#b {
+    grid-column: 3 / span 2;
+}
+#c {
+    grid-column: 5 / span 2;
+}
+#d {
+    background-color: rgb(74, 49, 212);
+    grid-column: 7 / span 2;
+}
+#e {
+    
+}
+#f {
+    background-color: #0992bc;
+}
+#g {
+    grid-column: 1 / span 2;
+    grid-row: 2 /span 2;
+}
+#h {
+    grid-column: 3 / span 4;
+    grid-row: 2 / span 2;
+}
+#i {
+    background-color: #F939BF;
+}
+#j {
+    
+}
+#k {
+    grid-column: 9 / span 2;
+}
+#l {
+    background-color: #0c2aec;
+    grid-column: 7 / span 2;
+}
+#m {
+    grid-column: 9 / span 2;
+}
+#n {
+    grid-column: 1 / span 2;
+}
+#o {
+    background-color: #ff8192;
+    grid-column: 3 / span 2;
+}
+#p {
+    grid-column: 5 / span 2;
+}
+#q {
+    grid-column: 7 / span 4;
 }
 
 /* styles for mobile protrait screen */
