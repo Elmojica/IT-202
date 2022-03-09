@@ -88,8 +88,12 @@ h2, h3, h4 {
     background-color: rgb(74, 49, 212);
     grid-column: 7 / span 2;
 }
+#e{
+    grid-column: 9;
+}
 #f {
     background-color: #0992bc;
+    grid-column: 10;
 }
 #g {
     grid-column: 1 / span 2;
@@ -101,6 +105,10 @@ h2, h3, h4 {
 }
 #i {
     background-color: #F939BF;
+    grid-column: 7;
+}
+#j{
+   grid-column: 8; 
 }
 #k {
     grid-column: 9 / span 2;
