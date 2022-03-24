@@ -1,0 +1,160 @@
+Document Object Model (DOM)
+
+What is it?
+    Try to visualize the order in which each HTML tag inherits another. Overall, an HTML file, is the root,
+    under that we have the <html> node and below that one we have two sibling nodes <head> and <body> and so 
+    on and so forth
+
+In the DOM, each element within the HTML document is called a node. It also defines a specialized object called 
+NodeList that represents a collection of nodes. 
+
+Element nodes: the actual html tags
+Text Nodes: actual text encompassed by the html tags
+Attribute: perhaps an href=[link]
+
+The DOM document object is the root JavaScript object represending the entire HTML document. 
+
+Document Methods> 
+
+>Selection Method: 
+They allow you to select one or more document elements. 
+
+        let node = document.getElementById("latest");
+it grabs each element nodes that are defined under the id name of "latest"
+
+
+>Query Selector Method: 
+
+    querySelectorAll() -> selects the parent along with its child html tags
+
+    querySelector() -> only selects one html tag
+
+Essential Element Node Properties:
+
+classList
+className
+id
+innerHTML
+style
+tagName
+href
+name
+src  
+value 
+
+Example: 
+
+<p id="here">hello <span>there</span></p>
+<ul>
+    <li>France</li>
+    <li>Spain</li>
+    <li>Thailand</li>
+</ul>
+<div id="main">
+    <a href="somewhere.html"><img src="whatever.gif" class="thumb"></a>
+</div>
+////////////////////////////////////////////////////////////////////////
+
+<script>
+    const node = document.getElementById("here");
+    // outputs: hello <span>there</span>
+    console.log(node.innerHTML);
+    // outputs: hello there
+    console.log(node.textContent);
+    const items = document.getElementsByTagName("li");
+    for (let i=0; i<items.length; i++) {
+        // outputs: France, then Spain, then Thailand
+        console.log(items[i].textContent);
+    }
+
+
+
+    const link = document.querySelector("#main a");
+    // outputs: somewhere.html
+    console.log(link.href);
+    const img = document.querySelector("#main img");
+    // outputs: whatever.gif
+    console.log(img.src);
+    // outputs: thumb
+    console.log(img.className);
+</script>
+
+
+
+Modifying the Dom: 
+
+ex: Changing an Element's style
+
+        const node = document.getElementById("someID");
+        node.style.backgroundColor = '#FFF00';
+        node.style.borderWidth = "3px";
+
+using innerHTML is generally discouraged because they are potentially vulnerable to cross-site scripting attacks. 
+
+DOM family relations: 
+
+    Each node in the DOM has a variety of "family relations" properties and methods for navigating between elements
+    and for adding or removing elements from the document hiearchy. 
+
+        parentNode
+
+        childNodes
+
+        firstChild
+
+        lastChild
+
+        previosSibling
+
+        nextSibling
+
+        and more!
+
+
+DOM Timing: 
+
+You cannot access or modify the DOM unless it has been loaded already. 
+
+DOM programming is written *after* the markup as in listing 9.2. 
+
+JavaScript Event handling: 
+
+    1. Event Handler DEFINED 
+    2. Event Handler REGISTERED
+    3. Event TRIGGERED  
+    4. Event Handler EXECUTES 
+
+
+Implementing an Event Handler: 
+
+first defined, then registered to an element node object. 
+
+Registering an event handlre requires passing a callback function to the addEventListener()
+
+<input type="submit" id="btn">
+<script>
+    function simpleHandler(){
+        alert("button was clicked");
+    }
+    const btn = document.querySelector("#btn");
+    btn.addEventListener("click", simpleHandler);
+</script>
+
+
+Event Types: 
+    mouse events
+        click
+        dblclick
+        mousedown
+        mouseup: the mouse was released over an element
+        mouseover: the mouse was moved (not clicked) over an element
+        mouseout: the mouse was moved off of an element
+        mousemove: the mouse was moved while over an element
+    keyboard events
+        keydown
+        keyup
+    touch events
+    form events 
+    frame events
+
+
